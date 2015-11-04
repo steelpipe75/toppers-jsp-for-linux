@@ -47,6 +47,7 @@
 
 #ifndef _MACRO_ONLY
 
+#include <stdlib.h>
 #include <setjmp.h>
 #include <signal.h>
 
