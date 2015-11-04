@@ -5,6 +5,7 @@
  * 
  *  Copyright (C) 2000-2003 by Embedded and Real-Time Systems Laboratory
  *                              Toyohashi Univ. of Technology, JAPAN
+ *  Copyright (C) 2006-2008 by Yasuo Kominami, JAPAN
  * 
  *  上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation 
  *  によって公表されている GNU General Public License の Version 2 に記
@@ -59,6 +60,23 @@ IMS	int_sigmask;
 void
 dispatch()
 {
+#if 1
+	/* by kominami */
+/* setjmp,longjmpの実装に依存しないための変更
+ */
+    sigset_t waitmask;
+    sigemptyset(&waitmask);
+    sigaddset(&waitmask,SIGUSR1);
+        if (enadsp && (!runtsk || (runtsk != schedtsk
+                        && setjmp(runtsk->tskctxb.env) == 0))) {
+            while (!(runtsk = schedtsk)) {
+                sigsuspend(&waitmask);
+            }
+            longjmp(runtsk->tskctxb.env, 1);
+        }else{
+            calltex();
+        }
+#else		
     sigset_t waitmask;
     sigemptyset(&waitmask);
     sigaddset(&waitmask,SIGUSR1);
@@ -71,6 +89,7 @@ dispatch()
         }else{
             calltex();
         }
+#endif		
 }
 
 
@@ -79,12 +98,28 @@ dispatch()
  *
  *  exit_and_dispatch は，CPUロック状態で呼び出さなければならない．
  */
+#if 1
+	  /* by kominami */
+/* setjmp,longjmpの実装に依存しないための変更
+ */
+static int tsknum = 0;
+static int call_count = 0;
+
+#define STACK_SIZE_PER_FUNCCALL (4)
+
+#endif
 
 void
 exit_and_dispatch() 
 {                   
     runtsk = 0;
+
+#if 0	
+	/* by kominami */
+	/* setjmp,longjmpの実装に依存しないための変更
+	 */
     dispatch();
+#endif	
 }
 
 
@@ -178,10 +213,69 @@ get_ims(IMS *p_ims)
  * タスク起動ルーチン
  *
  */
-
+		
 void
 activate_r()
 {
+#if 1	
+	  /* by kominami */
+	/* setjmp,longjmpの実装に依存しないために追加
+	 */
+
+	TCB *tcb;
+	
+	if( tsknum < tmax_tskid ){
+		if( call_count <= 0 ){
+			int j;
+			j = INDEX_TSK(torder_table[tsknum]);
+			tcb = &(tcb_table[j]);
+			call_count = (tcb->tinib->stksz + STACK_MERGIN) / STACK_SIZE_PER_FUNCCALL + 1;
+			tsknum++;
+			if( setjmp(tcb->tskctxb.env) == 0 ){
+				activate_r();
+			} else {
+				/*
+				 *  シグナルマスクを設定して，タスクを起動する．
+				 */
+#ifdef SUPPORT_CHG_IMS
+				sigprocmask(SIG_SETMASK,&task_sigmask,((void *)0));
+#else /* SUPPORT_CHG_IMS */
+				sigset_t set;
+				sigemptyset(&set);
+				sigprocmask(SIG_SETMASK,&set,((void *)0));
+#endif /* SUPPORT_CHG_IMS */
+				(*runtsk->tinib->task)(runtsk->tinib->exinf);
+				
+				ext_tsk();
+			}
+		}
+		else {
+			call_count--;
+			activate_r();
+		}
+	}
+	else {
+		struct sigaltstack      ss;
+		struct sigaction action;
+
+		/*
+		 *  シグナルスタックを，プロセススタック上に取る．
+		 *  BSDのシグナルと異なりss.ss_flagsにSS_ONSTACKを
+		 *  書き込んでも反映されないため、タスク独立部を表す
+		 *  inSigStackを使用する。
+		 */
+		
+		
+		ss.ss_sp = (void *)(((INT) &ss) - SIGSTACK_MERGIN - SIGSTKSZ);
+		ss.ss_size = SIGSTKSZ;
+		ss.ss_flags = 0;
+		sigaltstack(&ss, 0);
+
+		
+		/* これ以上再帰する必要が無くなれば、dispatch()を呼ぶ */
+		dispatch();
+	}
+#else
     /*
      *  シグナルマスクを設定して，タスクを起動する．
      */
@@ -195,6 +289,7 @@ activate_r()
     (*runtsk->tinib->task)(runtsk->tinib->exinf);
     
     ext_tsk();
+#endif	
 }
 
 

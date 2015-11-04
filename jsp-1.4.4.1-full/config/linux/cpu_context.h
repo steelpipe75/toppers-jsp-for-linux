@@ -5,6 +5,7 @@
  * 
  *  Copyright (C) 2000-2003 by Embedded and Real-Time Systems Laboratory
  *                              Toyohashi Univ. of Technology, JAPAN
+ *  Copyright (C) 2006-2008 by Yasuo Kominami, JAPAN
  * 
  *  上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation 
  *  によって公表されている GNU General Public License の Version 2 に記
@@ -71,10 +72,15 @@ extern void	activate_r(void);
 Inline void
 activate_context(TCB *tcb)
 {
+#if 0
+	/* by kominami */
+	/* setjmp,longjmpの実装に依存しないための変更
+	 */
     ((int *) &(tcb->tskctxb.env))[JB_PC] = (int) activate_r;
     ((int *) &(tcb->tskctxb.env))[JB_SP] = (int)(((VB *) tcb->tinib->stk) +
                                                  tcb->tinib->stksz
                                                  - STACK_MERGIN);
+#endif
 }
 
 /*

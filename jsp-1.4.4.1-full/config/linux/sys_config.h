@@ -5,6 +5,7 @@
  * 
  *  Copyright (C) 2000-2003 by Embedded and Real-Time Systems Laboratory
  *                              Toyohashi Univ. of Technology, JAPAN
+ *  Copyright (C) 2006-2008 by Yasuo Kominami, JAPAN
  * 
  *  上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation 
  *  によって公表されている GNU General Public License の Version 2 に記
@@ -44,8 +45,12 @@
 /*
  *  起動メッセージのターゲット名
  */
+#if 1
+/* by kominami  */
+#define	TARGET_NAME	"Linux(posix-base)"
+#else
 #define	TARGET_NAME	"Linux"
-
+#endif
 /*
  *  CPU と _setjmp/_longjmp ライブラリの実装に依存する定数の設定
  *

@@ -5,6 +5,7 @@
  * 
  *  Copyright (C) 2000-2003 by Embedded and Real-Time Systems Laboratory
  *                              Toyohashi Univ. of Technology, JAPAN
+ *  Copyright (C) 2006-2008 by Yasuo Kominami, JAPAN
  * 
  *  上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation 
  *  によって公表されている GNU General Public License の Version 2 に記
@@ -71,10 +72,22 @@ int main()
       sigaction(SIGUSR1,&action,NULL);
       raise(SIGUSR1);
       
-      
+#if 1
+	  /* by kominami */
+	  /* setjmp,longjmpの実装に依存しないための変更
+	 */
+	/* この段階で、全タスクのスタック領域を確保する
+	   そのため、activate_r関数を再帰呼び出しし、その先でdispatch()を呼び出す
+	 */
+	activate_r();
+#endif	  
     /*
      * ここに戻ることはない。
      */
     return(0);
 }
 
+/* リンクに必要になるためここに追加 */
+void software_term_hook( void )
+{
+}
