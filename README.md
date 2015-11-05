@@ -21,8 +21,11 @@ http://www.toppers.jp/TOPPERS-USERS/2012-June/003807.html
 http://www.toppers.jp/TOPPERS-USERS/2012-June/003810.html
 
 Three additional changes are needed:
+
 fix perl5 getopt issues in utils/makedep
+
 disable gcc code optimization (-O2 -> -O0)
+
 fix implicit declaration of exit()
 
 Note:  original TOPPERS proejct and each patch creator has each own copyright and license. Please take care it.
