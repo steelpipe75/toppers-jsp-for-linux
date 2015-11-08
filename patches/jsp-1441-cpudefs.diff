@@ -1,0 +1,12 @@
+*** jsp-1.4.4.1-full-orig/config/linux/cpu_defs.h	2011-05-20 09:19:52.000000000 +0900
+--- jsp-1.4.4.1-full/config/linux/cpu_defs.h	2015-11-05 00:49:14.425711546 +0900
+***************
+*** 47,52 ****
+--- 47,53 ----
+  
+  #ifndef _MACRO_ONLY
+  
++ #include <stdlib.h>
+  #include <setjmp.h>
+  #include <signal.h>
+  

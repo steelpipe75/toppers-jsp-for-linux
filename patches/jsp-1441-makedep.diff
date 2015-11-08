@@ -1,0 +1,55 @@
+*** jsp-1.4.4.1-full-orig/utils/makedep	2011-05-20 09:19:52.000000000 +0900
+--- jsp-1.4.4.1-full/utils/makedep	2015-11-05 00:47:22.201713404 +0900
+***************
+*** 39,45 ****
+  #  @(#) $Id: makedep,v 1.11 2005/11/24 11:44:31 hiro Exp $
+  # 
+  
+! require "getopt.pl";
+  
+  #  オプションの定義
+  #
+--- 39,46 ----
+  #  @(#) $Id: makedep,v 1.11 2005/11/24 11:44:31 hiro Exp $
+  # 
+  
+! #require "getopt.pl";
+! use Getopt::Std;
+  
+  #  オプションの定義
+  #
+***************
+*** 56,62 ****
+  #
+  #  オプションの処理
+  #
+! do Getopt("COTD");
+  
+  $cc_path = $opt_C;
+  $cc_opts = $opt_O;
+--- 57,64 ----
+  #
+  #  オプションの処理
+  #
+! #do Getopt("COTD");
+! getopt "COTD";
+  
+  $cc_path = $opt_C;
+  $cc_opts = $opt_O;
+***************
+*** 142,147 ****
+  #
+  foreach $file (@ARGV) {
+  	%dependlist = ();
+! 	do makedepend_one($file);
+! 	do output_dependlist($file) if (%dependlist);
+  }
+--- 144,151 ----
+  #
+  foreach $file (@ARGV) {
+  	%dependlist = ();
+! #	do makedepend_one($file);
+! #	do output_dependlist($file) if (%dependlist);
+! 	makedepend_one($file);
+! 	output_dependlist($file) if (%dependlist);
+  }

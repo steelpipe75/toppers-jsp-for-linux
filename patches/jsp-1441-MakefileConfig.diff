@@ -1,0 +1,20 @@
+*** jsp-1.4.4.1-full-orig/config/linux/Makefile.config	2011-05-20 09:19:52.000000000 +0900
+--- jsp-1.4.4.1-full/config/linux/Makefile.config	2015-11-05 00:44:50.633715915 +0900
+***************
+*** 10,16 ****
+  #  カーネルに関する定義
+  #
+  INCLUDES := $(INCLUDES) -I$(CONFIGDIR)/$(CPU) 
+! COPTS    := $(COPTS) -g -O2  
+  
+  #
+  #  カーネルに関する定義
+--- 10,17 ----
+  #  カーネルに関する定義
+  #
+  INCLUDES := $(INCLUDES) -I$(CONFIGDIR)/$(CPU) 
+! #COPTS    := $(COPTS) -g -O2  
+! COPTS    := $(COPTS) -g -O0
+  
+  #
+  #  カーネルに関する定義
