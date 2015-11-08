@@ -41,3 +41,41 @@ disable gcc code optimization (-O2 -> -O0)
 fix implicit declaration of exit()
 
 Note:  original TOPPERS proejct and each patch creator has each own copyright and license. Please take care it.
+
+
+```shell:commands
+
+wget https://www.toppers.jp/download.cgi/jsp-1.4.4.1_full.tar.gz
+wget http://www.northern-cross.info/DL/jsp-143-linux-posix-diff.tar.gz
+wget https://github.com/kidasan/toppers/raw/master/patches/patch_1441.diff
+
+tar xzvf jsp-1.4.4.1_full.tar.gz
+tar xzvf jsp-143-linux-posix-diff.tar.gz
+
+pushd jsp-1.4.4.1-full/config/linux
+patch -p3 < ../../../jsp-143-linux-posix.diff
+popd
+pushd jsp-1.4.4.1-full
+patch -p0 < ../patch_1441.diff
+popd
+
+# apply my patches
+patch -p0 < jsp-1441-MakeConfig.diff
+patch -p0 < jsp-1441-makedep.diff
+patch -p0 < jsp-1441-cpudef.diff
+patch -p0 < jsp-1441-parser.diff
+
+# build cfg and sample1
+pushd jsp-1.4.4.1-full/cfg
+make
+popd
+
+pushd jsp-1.4.4.1-full
+mkdir OBJ
+cd OBJ
+../configure -C linux
+make depend
+make
+popd
+
+```
