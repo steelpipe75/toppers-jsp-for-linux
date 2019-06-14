@@ -17,6 +17,10 @@ https://www.toppers.jp/jsp-kernel.html
 * libboost-program-options-dev (1.58.0.1ubuntu1)
 * libboost-regex-dev (1.58.0.1ubuntu1)
 
+## Notice
+
+"glibc_sysdep.h" contains PTR_MANGLE definitions from glibc sysdep.h (i386, x86_64).
+
 ## Quick Start (sample1)
     sudo apt-get install git gcc-multilib libboost-dev libboost-system-dev libboost-filesystem-dev libboost-program-options-dev libboost-regex-dev
     git clone https://github.com/morioka/toppers-jsp-for-linux
