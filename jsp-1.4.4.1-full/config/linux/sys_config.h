@@ -62,7 +62,8 @@
  *  ジン．スタートアップルーチンが使うためのスタック領域．
  */
 
-//#if defined(i386) | defined(_i386_) | defined(__i386__)
+#include "glibc_sysdep.h"	/* PTR_MANGLE */
+
 #if defined(__i386__)
 
 #define	JB_PC			5
@@ -72,14 +73,6 @@
 #define JMPBUF_SP		JB_SP
 #define STACK_MERGIN		4
 #define SIGSTACK_MERGIN		8192
-
-#define PTR_MANGLE(var) asm volatile ("xorl %%gs:0x18,%0;"	\
-				"roll $9,%0;"			\
-				:"=r"(var) :"0"(var))
-
-#define PTR_DEMANGLE(var) asm volatile ("rorl $9, %0;"		\
-				"xorl %%gs:0x18, %0;"		\
-				:"=r"(var) :"0"(var))
 
 #elif defined(__x86_x64__)
 
@@ -91,16 +84,8 @@
 #define STACK_MERGIN		8
 #define SIGSTACK_MERGIN		8192
 
-#define PTR_MANGLE(var) asm volatile ("xor %%fs:0x30,%0;"	\
-				"rol $17,%0;"			\
-				:"=r"(var) :"0"(var))
-
-#define PTR_DEMANGLE(var) asm volatile ("ror $17, %0;"		\
-				"xor %%fs:0x30, %0;"		\
-				:"=r"(var) :"0"(var))
-
 #else
-//#error	architecture not supported
+/*#error	architecture not supported */
 #endif
 
 /*
