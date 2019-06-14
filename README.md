@@ -5,8 +5,8 @@ https://www.toppers.jp/jsp-kernel.html
 ## Platform
 
 * Ubuntu 16.04LTS (i386, x86_64) 
- * avaialble 32bit binary only
-
+  * only 32bit binary available
+  
 ## Required packages
 
 * git
