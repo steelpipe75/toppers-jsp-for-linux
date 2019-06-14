@@ -124,7 +124,7 @@ sense_lock()
         return(FALSE);
 #else
     
-#error not supported.
+/*#error not supported. */
     
 #endif /* linux */    
 }

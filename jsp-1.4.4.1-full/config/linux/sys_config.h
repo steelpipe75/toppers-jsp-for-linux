@@ -5,7 +5,6 @@
  * 
  *  Copyright (C) 2000-2003 by Embedded and Real-Time Systems Laboratory
  *                              Toyohashi Univ. of Technology, JAPAN
- *  Copyright (C) 2006-2008 by Yasuo Kominami, JAPAN
  * 
  *  上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation 
  *  によって公表されている GNU General Public License の Version 2 に記
@@ -45,12 +44,7 @@
 /*
  *  起動メッセージのターゲット名
  */
-#if 1
-/* by kominami  */
-#define	TARGET_NAME	"Linux(posix-base)"
-#else
 #define	TARGET_NAME	"Linux"
-#endif
 /*
  *  CPU と _setjmp/_longjmp ライブラリの実装に依存する定数の設定
  *
@@ -68,18 +62,46 @@
  *  ジン．スタートアップルーチンが使うためのスタック領域．
  */
 
-#if defined(i386) | defined(_i386_) | defined(__i386__)
+//#if defined(i386) | defined(_i386_) | defined(__i386__)
+#if defined(__i386__)
+
+#define	JB_PC			5
+#define	JB_SP			4
 
 #define JMPBUF_PC		JB_PC
 #define JMPBUF_SP		JB_SP
 #define STACK_MERGIN		4
 #define SIGSTACK_MERGIN		8192
 
-#else /* i386 */
+#define PTR_MANGLE(var) asm volatile ("xorl %%gs:0x18,%0;"	\
+				"roll $9,%0;"			\
+				:"=r"(var) :"0"(var))
 
-#error not supported.
+#define PTR_DEMANGLE(var) asm volatile ("rorl $9, %0;"		\
+				"xorl %%gs:0x18, %0;"		\
+				:"=r"(var) :"0"(var))
 
-#endif /* i386 */
+#elif defined(__x86_x64__)
+
+#define	JB_PC			7
+#define	JB_SP			6
+
+#define JMPBUF_PC		JB_PC
+#define JMPBUF_SP		JB_SP
+#define STACK_MERGIN		8
+#define SIGSTACK_MERGIN		8192
+
+#define PTR_MANGLE(var) asm volatile ("xor %%fs:0x30,%0;"	\
+				"rol $17,%0;"			\
+				:"=r"(var) :"0"(var))
+
+#define PTR_DEMANGLE(var) asm volatile ("ror $17, %0;"		\
+				"xor %%fs:0x30, %0;"		\
+				:"=r"(var) :"0"(var))
+
+#else
+//#error	architecture not supported
+#endif
 
 /*
  *  シグナルスタックの変更に sigaltstack を使う
