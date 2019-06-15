@@ -2,19 +2,19 @@
 --- jsp-1.4.4.1-full/config/linux/Makefile.config	2015-11-05 00:44:50.633715915 +0900
 ***************
 *** 10,16 ****
-  #  カ〖ネルに簇する年盗
+  #  銈兗銉嶃儷銇枹銇欍倠瀹氱京
   #
   INCLUDES := $(INCLUDES) -I$(CONFIGDIR)/$(CPU) 
 ! COPTS    := $(COPTS) -g -O2  
   
   #
-  #  カ〖ネルに簇する年盗
+  #  銈兗銉嶃儷銇枹銇欍倠瀹氱京
 --- 10,17 ----
-  #  カ〖ネルに簇する年盗
+  #  銈兗銉嶃儷銇枹銇欍倠瀹氱京
   #
   INCLUDES := $(INCLUDES) -I$(CONFIGDIR)/$(CPU) 
 ! #COPTS    := $(COPTS) -g -O2  
 ! COPTS    := $(COPTS) -g -O0
   
   #
-  #  カ〖ネルに簇する年盗
+  #  銈兗銉嶃儷銇枹銇欍倠瀹氱京
