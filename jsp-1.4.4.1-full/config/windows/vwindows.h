@@ -53,6 +53,7 @@
 #define SIZE wSIZE
 #define BOOL wBOOL
 #define NULL wNULL
+#define wNULL (0)
 #include <windows.h>
 #undef NULL
 #undef SIZE
