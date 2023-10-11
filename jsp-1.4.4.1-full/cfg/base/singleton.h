@@ -45,7 +45,7 @@
 
 #ifdef _MSC_VER
 #  pragma warning(disable:4290) //C++ の例外の指定は無視されます。関数が __declspec(nothrow) でないことのみ表示されます。
-#  pragma warning(disable:4291) //初期化コ−ドが例外をスロ−すると、'new' 演算子を使用しているとメモリを解放しません。
+#  pragma warning(disable:4291) //初期化コ－ドが例外をスロ－すると、'new' 演算子を使用しているとメモリを解放しません。
 #  pragma warning(disable:4786) //デバッグ情報で識別子が 255 文字に切り捨てられました。
 #endif
 

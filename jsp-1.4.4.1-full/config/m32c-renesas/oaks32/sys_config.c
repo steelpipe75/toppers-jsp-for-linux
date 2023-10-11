@@ -80,7 +80,7 @@ sys_initialize(void)
 	sil_wrb_mem((VP)(p+TADR_SFR_UC1_OFFSET), 0x00);
 
 	/* 送受信モードレジスタの初期化 */
-	sil_wrb_mem((VP)(p+TADR_SFR_UMR_OFFSET), 0x05);	/* 送受信モ−ドレジスタ 内部クロック,*/
+	sil_wrb_mem((VP)(p+TADR_SFR_UMR_OFFSET), 0x05);	/* 送受信モ－ドレジスタ 内部クロック,*/
 				/* 非同期、8ビット、パリティなし、*/
 				/* スリープなし	*/
 			/* 送信制御レジスタの初期化 */

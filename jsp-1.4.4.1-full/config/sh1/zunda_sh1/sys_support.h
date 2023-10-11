@@ -110,22 +110,22 @@
  *  PA 固定機能（PA15,14,13,12,03,01を除く）
  *
  *  PNO  I/O PAIOR  PACR1/2
- *  PA15 IN   [0]    [00] − 拡張Ｉ／Ｏに開放
- *  PA14 IN   [0]    [00] − 拡張Ｉ／Ｏに開放
- *  PA13 IN   [0]    [00] − 拡張Ｉ／Ｏに開放
- *  PA12 IN   [0]    [00] − 拡張Ｉ／Ｏに開放
- *  PA11 IN   [0]    [00] − RTC-4553-SOUT
- *  PA10 OUT  [1]    [00] − RTC-4553-CS[active-low]
- *  PA09 OUT  [1]    [00] − RTC-4553-WR[active-low]
- *  PA08 OUT  [1]    [10] − LEDCTL1 LED1制御[active-low]
- *  PA07 IN   [0]    [10] − 未使用
- *  PA06 −   [0]    [11] − RD に割り当て−
- *  PA05 OUT  [1]    [10] − WD-PULSE ウォッチドックリセットパルス↑↓＿にて
- *  PA04 −   [0]    [11] − WR に割り当て
- *  PA03 −   [0]    [00] − 拡張Ｉ／Ｏに開放
- *  PA02 −   [0]    [01] − CS6 に割り当て（ＬＡＮコントローラ用）
- *  PA01 −   [0]    [00] − 拡張Ｉ／Ｏに開放
- *  PA00 −   [0]    [01] − CS4 に割り当て（ROMICE 用）
+ *  PA15 IN   [0]    [00] － 拡張Ｉ／Ｏに開放
+ *  PA14 IN   [0]    [00] － 拡張Ｉ／Ｏに開放
+ *  PA13 IN   [0]    [00] － 拡張Ｉ／Ｏに開放
+ *  PA12 IN   [0]    [00] － 拡張Ｉ／Ｏに開放
+ *  PA11 IN   [0]    [00] － RTC-4553-SOUT
+ *  PA10 OUT  [1]    [00] － RTC-4553-CS[active-low]
+ *  PA09 OUT  [1]    [00] － RTC-4553-WR[active-low]
+ *  PA08 OUT  [1]    [10] － LEDCTL1 LED1制御[active-low]
+ *  PA07 IN   [0]    [10] － 未使用
+ *  PA06 －   [0]    [11] － RD に割り当て－
+ *  PA05 OUT  [1]    [10] － WD-PULSE ウォッチドックリセットパルス↑↓＿にて
+ *  PA04 －   [0]    [11] － WR に割り当て
+ *  PA03 －   [0]    [00] － 拡張Ｉ／Ｏに開放
+ *  PA02 －   [0]    [01] － CS6 に割り当て（ＬＡＮコントローラ用）
+ *  PA01 －   [0]    [00] － 拡張Ｉ／Ｏに開放
+ *  PA00 －   [0]    [01] － CS4 に割り当て（ROMICE 用）
  */
 #define	PAIOR_BASE	0x0720
 #define	PACR1_BASE	0x0002
@@ -334,22 +334,22 @@
 #define VAL_PFC_PBCR2   0x0000
  /*
  *  PNO  I/O PBIOR  PBCR1/2
- *  PB15 IN   [0]    [00] − 未使用 IRQ7 に割り当て（ＲＴＣ用）
- *  PB14 −   [0]    [01] − IRQ6 に割り当て（ＵＳＢコントローラ用）
- *  PB13 −   [0]    [01] − IRQ5 に割り当て（ＬＡＮコントローラ用）
- *  PB12 OUT  [1]    [00] − LEDCTL3 LED3 制御[active-low]
- *  PB11 −   [0]    [10] − TDX1 に割り当て（RS485 データ出力）
- *  PB10 −   [0]    [10] − RDX1 に割り当て（RS485 データ入力）
- *  PB09 −   [0]    [10] − TDX0 に割り当て（RS-232C データ出力）
- *  PB08 −   [0]    [10] − RDX0 に割り当て（RS-232C データ入力）
- *  PB07 IN   [0]    [00] − シリアルEEPROM-DO
- *  PB06 OUT  [1]    [00] − LEDCTL2 LED2 制御[active-low]
- *  PB05 OUT  [1]    [00] − TXE0 RS485 送信イネーブル出力送信停止
- *  PB04 OUT  [1]    [00] − シリアルEEPROM-CS[active-high]
- *  PB03 OUT  [1]    [00] − CTS0 RS232C のCTS 信号（未実装）
- *  PB02 IN   [0]    [00] − RTS0 RS232C のRTS 信号（未実装）
- *  PB01 OUT  [1]    [00] − シリアルEEPROM-SK、RTC-4553-SCK
- *  PB00 OUT  [1]    [00] − シリアルEEPROM-DI、RTC-4553-SIN
+ *  PB15 IN   [0]    [00] － 未使用 IRQ7 に割り当て（ＲＴＣ用）
+ *  PB14 －   [0]    [01] － IRQ6 に割り当て（ＵＳＢコントローラ用）
+ *  PB13 －   [0]    [01] － IRQ5 に割り当て（ＬＡＮコントローラ用）
+ *  PB12 OUT  [1]    [00] － LEDCTL3 LED3 制御[active-low]
+ *  PB11 －   [0]    [10] － TDX1 に割り当て（RS485 データ出力）
+ *  PB10 －   [0]    [10] － RDX1 に割り当て（RS485 データ入力）
+ *  PB09 －   [0]    [10] － TDX0 に割り当て（RS-232C データ出力）
+ *  PB08 －   [0]    [10] － RDX0 に割り当て（RS-232C データ入力）
+ *  PB07 IN   [0]    [00] － シリアルEEPROM-DO
+ *  PB06 OUT  [1]    [00] － LEDCTL2 LED2 制御[active-low]
+ *  PB05 OUT  [1]    [00] － TXE0 RS485 送信イネーブル出力送信停止
+ *  PB04 OUT  [1]    [00] － シリアルEEPROM-CS[active-high]
+ *  PB03 OUT  [1]    [00] － CTS0 RS232C のCTS 信号（未実装）
+ *  PB02 IN   [0]    [00] － RTS0 RS232C のRTS 信号（未実装）
+ *  PB01 OUT  [1]    [00] － シリアルEEPROM-SK、RTC-4553-SCK
+ *  PB00 OUT  [1]    [00] － シリアルEEPROM-DI、RTC-4553-SIN
  *
  *  PBIOR=0x107b
  *  PBCR1=0x14aa
