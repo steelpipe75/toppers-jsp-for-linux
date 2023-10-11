@@ -8,7 +8,7 @@
  *  Copyright (C) 2004-2006 by Embedded and Real-Time Systems Laboratory
  *              Graduate School of Information Science, Nagoya Univ., JAPAN
  * 
- *  上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation 
+ *  上記著作権者は，以下の (1)～(4) の条件か，Free Software Foundation 
  *  によって公表されている GNU General Public License の Version 2 に記
  *  述されている条件を満たす場合に限り，本ソフトウェア（本ソフトウェア
  *  を改変したものを含む．以下同じ）を使用・複製・改変・再配布（以下，
@@ -47,7 +47,7 @@
  *
  *  ユーザインタフェースを受け持つメインタスク（タスクID: MAIN_TASK，
  *  優先度: MAIN_PRIORITY）と，三つの並列実行されるタスク（タスクID:
- *  TASK1〜TASK3，初期優先度: MID_PRIORITY）で構成される．また，起動周
+ *  TASK1～TASK3，初期優先度: MID_PRIORITY）で構成される．また，起動周
  *  期が2秒の周期ハンドラ（周期ハンドラID: CYCHDR1）を用いる．
  *
  *  並列実行されるタスクは，task_loop 回空ループを実行する度に，タスク

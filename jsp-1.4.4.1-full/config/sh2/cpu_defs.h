@@ -9,7 +9,7 @@
  *                              Miyagi Prefectural Government, JAPAN
  *  Copyright (C) 2002-2004 by Hokkaido Industrial Research Institute, JAPAN
  * 
- *  上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation 
+ *  上記著作権者は，以下の (1)～(4) の条件か，Free Software Foundation 
  *  によって公表されている GNU General Public License の Version 2 に記
  *  述されている条件を満たす場合に限り，本ソフトウェア（本ソフトウェア
  *  を改変したものを含む．以下同じ）を使用・複製・改変・再配布（以下，
@@ -77,7 +77,7 @@ typedef	UINT	EXCNO;		/* CPU例外ハンドラ番号 */
 /*
  *  割込みマスクの型と割込みマスクの変更／参照
  *  
- *  本来は#ifdef SUPPORT_CHG_IPM〜#endifで囲むべきだが、
+ *  本来は#ifdef SUPPORT_CHG_IPM～#endifで囲むべきだが、
  *  このファイルがcpu_config.hより先にインクルードされるため
  *  省略している。
  *  この部分が残ることにより、生成されるコードはほとんどないので

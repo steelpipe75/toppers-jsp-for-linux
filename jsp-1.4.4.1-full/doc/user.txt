@@ -18,7 +18,7 @@
  Copyright (C) 2004-2007 by Embedded and Real-Time Systems Laboratory
              Graduate School of Information Science, Nagoya Univ., JAPAN
 
- 上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation 
+ 上記著作権者は，以下の (1)～(4) の条件か，Free Software Foundation 
  によって公表されている GNU General Public License の Version 2 に記
  述されている条件を満たす場合に限り，本ソフトウェア（本ソフトウェア
  を改変したものを含む．以下同じ）を使用・複製・改変・再配布（以下，
@@ -402,7 +402,7 @@ ID=2のオブジェクトが登録されない場合）には，コンフィギ�
 リ容量によって制限される．なお，JSPカーネルでは，オブジェクトを生成す
 るためのサービスコールはサポートしていない．
 
-タスクとメッセージの優先度には，1〜16の正の値を用いる．
+タスクとメッセージの優先度には，1～16の正の値を用いる．
 
 2.4 エラーチェックとエラーコード
 
@@ -1305,21 +1305,21 @@ JSPカーネルは，カーネルのトレースログを取得するための�
 マクロを提供する．
 
 (1) void _syslog_n(UINT prio, UINT type, VP_INT arg1, ..., VP_INT argn)
-    ※ n は 0〜6 のいずれか．
+    ※ n は 0～6 のいずれか．
 
-ログ種別が type，パラメータが arg1〜argn のログ情報を，重要度 prio で
+ログ種別が type，パラメータが arg1～argn のログ情報を，重要度 prio で
 出力するためのライブラリ関数．
 
 (2) void syslog_n(UINT prio, const char *format, arg1, ..., argn)
-    ※ n は 0〜5 のいずれか．
+    ※ n は 0～5 のいずれか．
 
 format 文字列およびそれに続く引数から作成されるコメント（ログ種別が 
 LOG_TYPE_COMMENT のログ情報）を，重要度 prio で出力するためのマクロ．
 
-format はメッセージのフォーマット記述，arg1〜argn はフォーマット記述中
+format はメッセージのフォーマット記述，arg1～argn はフォーマット記述中
 で参照される値で，printf のフォーマット記述のサブセットとなっている．
-arg1〜argn は VP_INT型にキャストされるため，VP_INT型に型変換できる任意
-の型を渡すことができ，型チェックはされない．format および arg1〜argn 
+arg1～argn は VP_INT型にキャストされるため，VP_INT型に型変換できる任意
+の型を渡すことができ，型チェックはされない．format および arg1～argn 
 には，次の制限がある．
 
 ・format のフォーマット記述は，このマクロから戻った後も変化してはなら
@@ -1350,7 +1350,7 @@ arg1〜argn は VP_INT型にキャストされるため，VP_INT型に型変換�
     %lx   引数をunsigned long型とみなし，16進数（英文字は小文字）で表示
     %lX   引数をunsigned long型とみなし，16進数（英文字は大文字）で表示
 
-・arg1〜argn にポインタを渡す場合（%s に対応する引数の場合）に，ポイン
+・arg1～argn にポインタを渡す場合（%s に対応する引数の場合）に，ポイン
 タの指すデータは，このマクロから戻った後も変化してはならない．定数文字
 列を渡すことを想定している．
 
@@ -1428,7 +1428,7 @@ syslog_output の各関数を呼び出している場合，それらの関数の
 （_kernel_syslog_initialize）と終了処理関数（_kernel_syslog_teminate）
 は，アプリケーションから呼び出す必要がある．
 
-なお，(b)〜(c) の設定に固定して使用する場合にも，カーネル内の一部のコー
+なお，(b)～(c) の設定に固定して使用する場合にも，カーネル内の一部のコー
 ドが不要になり，コードサイズを小さくできる余地があるが，簡易な方法は用
 意していない．
 

@@ -16,7 +16,7 @@
     Copyright (C) 2001-2004 by Dep. of Computer Science and Engineering
                      Tomakomai National College of Technology, JAPAN
    
-    上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation 
+    上記著作権者は，以下の (1)～(4) の条件か，Free Software Foundation 
 
     によって公表されている GNU General Public License の Version 2 に記
     述されている条件を満たす場合に限り，本ソフトウェア（本ソフトウェア
@@ -76,7 +76,7 @@
 
 1. 4  シリアルポート (SCI)
 
-  H8S/2000シリーズにはSCI0〜SCI1（SCI2）の2本（3本）のシリアルポートが
+  H8S/2000シリーズにはSCI0～SCI1（SCI2）の2本（3本）のシリアルポートが
 あり、user_config.hに定義しているTNUM_PORTにより何本使用するか指定でき
 る。現在の実装では3本まで使用できる。（下記の注意を参照） 
 JSP カーネルのログ出力用にはSCI1を使用している。 
@@ -198,7 +198,7 @@ jsp-1.4.1 H8S依存部（gcc版）では、割込みベクタテーブルを手�
 
 　　　設定に用いる値はマクロ定義されている。
 　　　
-　　　・IPRA〜IPRKレジスタのアドレス
+　　　・IPRA～IPRKレジスタのアドレス
 　　　   jsp/config/h8s-renesas/h8s2339f.h
            #define IPRA		0xfec4
            #define IPRB 	0xfec5
@@ -253,7 +253,7 @@ H8S依存の割込みマスクの変更・参照のためのサービスコー�
 【機能】
 
 IPM（Interrupt Priority Mask）を ipm で指定された値に設定する．
-IPMに指定した値が0〜MAX_IPMの範囲外の場合，E_PARエラーとなる．IPM を0
+IPMに指定した値が0～MAX_IPMの範囲外の場合，E_PARエラーとなる．IPM を0
 以外に設定した場合でも，ディスパッチは禁止されない．また，設定したIPM
 の値は，ディスパッチ後も引き継がれる．ディスパッチを禁止したい場合には，
 dis_dspと併用すればよい．
@@ -346,7 +346,7 @@ unsigned int型に定義されている。
   　　・戻り番地
   　　・CCRレジスタ
   　　・EXRレジスタ（＋リザーブ領域1バイト）
-  　　・er0〜er3
+  　　・er0～er3
   　　　　計　22バイト
   　　　　
 また、割込みの出口処理でタスクスイッチする場合はer4からer6の12バイトも
@@ -413,7 +413,7 @@ MAX_IPMを7に設定した場合、最高７つの割込みがネストする。
 
 3. 3  シリアルインタフェースドライバ
 
-  H8S/2339Fには SCI0〜SCI2 の 3 本のシリアルポートがあり、
+  H8S/2339Fには SCI0～SCI2 の 3 本のシリアルポートがあり、
 user_config.h に定義している TNUM_PORT により何本使用するか指定できる。
 現在の実装では 3本まで使用できる。 JSP カーネルのログ出力用には SCI1
 を使用している。
@@ -831,7 +831,7 @@ H8SのI/Oポートのデータ・ディレクション・レジスタDDRは書�
 合性を保つことができない。
 そのため、本実装では、メモリ上にテンポラリを用意して、DDRの現在値を保
 持する方法を採っている。ポート番号はIO_PORT_ID型にtypedefされており、
-IO_PORT1〜IO_PORTGののいずれかを指定する。（ポート4は入力専用のため、
+IO_PORT1～IO_PORTGののいずれかを指定する。（ポート4は入力専用のため、
 DDRレジスタがないので欠番としている。）ポート番号として、これら以外の
 値を指定した場合はassert文でエラーとなる。
 
@@ -973,13 +973,13 @@ SCRレジスタのCKS0,CKS1ビット
 (12) DDRアクセスルーチンのための定数定義
 
 (a) DDRレジスタのアドレス
-DDRレジスタのアドレスを以下のマクロ名P1DDR〜PGDDRで定義する。
+DDRレジスタのアドレスを以下のマクロ名P1DDR～PGDDRで定義する。
 定義ファイル：sys_config.hからインクルードされるファイル
 　　　　　　　h8s2xxxf.hで定義するのを標準とする。
 
 (b) DDRレジスタの初期値
 スタートアップルーチン実行直後のDDRレジスタの値をマクロ名
-P1DDR0〜PGDDR0で定義する。
+P1DDR0～PGDDR0で定義する。
 定義ファイル：minet_h8s_2339f.h
 
 7.2 ビルド用のスクリプトについて

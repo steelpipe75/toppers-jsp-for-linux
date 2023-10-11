@@ -8,7 +8,7 @@
  *  Copyright (C) 2001-2004 by Industrial Technology Institute,
  *                              Miyagi Prefectural Government, JAPAN
  * 
- *  上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation 
+ *  上記著作権者は，以下の (1)～(4) の条件か，Free Software Foundation 
  *  によって公表されている GNU General Public License の Version 2 に記
  *  述されている条件を満たす場合に限り，本ソフトウェア（本ソフトウェア
  *  を改変したものを含む．以下同じ）を使用・複製・改変・再配布（以下，
@@ -106,8 +106,8 @@
 	.align 2
 	.global _dispatch
 _dispatch:
-				/* pr,r8〜r15 をスタックに保存           */
-	mov.l  r8, @-r15       	/* r0〜r7は呼び出し元で保存しているため  */
+				/* pr,r8～r15 をスタックに保存           */
+	mov.l  r8, @-r15       	/* r0～r7は呼び出し元で保存しているため  */
 	mov.l  r9, @-r15        /* 保存する必要が無い                    */
 	mov.l  r10,@-r15
 	mov.l  r11,@-r15
@@ -941,14 +941,14 @@ _check_exc_entry_ret:
 /*
  *  no_reg_exception()
  *  CPU例外として登録されていない例外が発生すると呼び出される
- *  例外が発生した時点のpc,sr,pr,r0〜15を出力してカーネル
+ *  例外が発生した時点のpc,sr,pr,r0～15を出力してカーネル
  *  を停止する。
  */
 	.text
 	.align 2
 	.globl _no_reg_exception
 _no_reg_exception:
-				/*  pr,r0〜15を保存  */
+				/*  pr,r0～15を保存  */
 	sts.l  pr, @-r15
 	mov.l  r15,@-r15
 	mov.l  r14,@-r15

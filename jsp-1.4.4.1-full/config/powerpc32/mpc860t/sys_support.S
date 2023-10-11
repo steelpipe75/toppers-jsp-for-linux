@@ -8,7 +8,7 @@
  *  Copyright (C) 2001-2004 by Industrial Technology Institute,
  *                              Miyagi Prefectural Government, JAPAN
  * 
- *  上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation 
+ *  上記著作権者は，以下の (1)～(4) の条件か，Free Software Foundation 
  *  によって公表されている GNU General Public License の Version 2 に記
  *  述されている条件を満たす場合に限り，本ソフトウェア（本ソフトウェア
  *  を改変したものを含む．以下同じ）を使用・複製・改変・再配布（以下，
@@ -149,7 +149,7 @@ hardware_init_hook:
 
     /*
      *  ベースレジスタBR0 = 0x1000,0801
-     *  　　BA=0x1000(0b)：アクセス範囲 0x1000,0000〜
+     *  　　BA=0x1000(0b)：アクセス範囲 0x1000,0000～
      *  　　PS=10：ポートサイズ 16ビット
      *  　　PARE=0：パリティ・ディセーブル
      *  　　WP=0：リード／ライト許可（保護なし）　要検討
@@ -268,7 +268,7 @@ activate_A20_line:
 
     /*
      *  ベース・レジスタBR2 = 0x0000,0081
-     *  　　BA=0x0000(0b)：アクセス範囲 0x0000,0000〜
+     *  　　BA=0x0000(0b)：アクセス範囲 0x0000,0000～
      *  　　PS=00：ポートサイズ 32ビット
      *  　　PARE=0：パリティ・ディセーブル
      *  　　WP=0：リード／ライト許可（保護なし）

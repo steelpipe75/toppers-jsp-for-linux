@@ -10,7 +10,7 @@
  *  Copyright (C) 2001-2004 by Industrial Technology Institute,
  *                              Miyagi Prefectural Government, JAPAN
  * 
- *  上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation 
+ *  上記著作権者は，以下の (1)～(4) の条件か，Free Software Foundation 
  *  によって公表されている GNU General Public License の Version 2 に記
  *  述されている条件を満たす場合に限り，本ソフトウェア（本ソフトウェア
  *  を改変したものを含む．以下同じ）を使用・複製・改変・再配布（以下，
@@ -61,7 +61,7 @@
 
 /* タスクディスパッチャを明示的に呼び出す時 */
 _dispatch:
-	push.l	er2			/* er2〜6 を保存 */
+	push.l	er2			/* er2～6 を保存 */
 	push.l	er3
 	push.l	er4
 	push.l	er5
@@ -143,7 +143,7 @@ dispatcher_2_enable_interrupt:
  *  タスクコンテキストへの復帰処理（ディスパッチャ出口処理）
  */
 dispatch_r:
-	pop.l	er6			/* er2〜6 を復元 */
+	pop.l	er6			/* er2～6 を復元 */
 	pop.l	er5
 	pop.l	er4
 	pop.l	er3
@@ -400,13 +400,13 @@ _activate_r:
 /*
  *  no_reg_exception()
  *    CPU例外として登録されていない例外が発生すると呼び出される。
- *    例外が発生した時点の PC、er0〜7 を出力してカーネルを停止する。
+ *    例外が発生した時点の PC、er0～7 を出力してカーネルを停止する。
  */
 	.global no_reg_exception
 
 no_reg_exception:
 
-	push.l	er0			/* er0〜6を保存	*/
+	push.l	er0			/* er0～6を保存	*/
 	push.l	er1
 	push.l	er2
 	push.l	er3

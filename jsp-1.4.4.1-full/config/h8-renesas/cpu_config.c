@@ -11,7 +11,7 @@
  *                   Tomakomai National College of Technology, JAPAN
  *  Copyright (C) 2003-2004 by Katsuhiro Amano
  *
- *  上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation
+ *  上記著作権者は，以下の (1)～(4) の条件か，Free Software Foundation
  *  によって公表されている GNU General Public License の Version 2 に記
  *  述されている条件を満たす場合に限り，本ソフトウェア（本ソフトウェア
  *  を改変したものを含む．以下同じ）を使用・複製・改変・再配布（以下，
@@ -226,7 +226,7 @@ void sil_dly_nse(UINT dlytim) {
  *　　+24:er6
  *　　+28:crr
  *　　+29:pc
- *　　+32〜:割込み前に使用されていたスタック領域
+ *　　+32～:割込み前に使用されていたスタック領域
  */
 
 /*

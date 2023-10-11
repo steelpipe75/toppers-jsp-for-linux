@@ -8,7 +8,7 @@
  *  Copyright (C) 2001-2004 by Industrial Technology Institute,
  *                              Miyagi Prefectural Government, JAPAN
  * 
- *  上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation 
+ *  上記著作権者は，以下の (1)～(4) の条件か，Free Software Foundation 
  *  によって公表されている GNU General Public License の Version 2 に記
  *  述されている条件を満たす場合に限り，本ソフトウェア（本ソフトウェア
  *  を改変したものを含む．以下同じ）を使用・複製・改変・再配布（以下，
@@ -1172,7 +1172,7 @@ dispatch_r:
      *  call_texrtn()からここには戻ってこないで、dispatch()の
      *　呼び出し元（=LRレジスタが指し示す番地）に直接戻る。
      *　
-     *　call_texrtn()の呼び出しにより(sp+3)〜(ps+7)番地の内容が
+     *　call_texrtn()の呼び出しにより(sp+3)～(ps+7)番地の内容が
      *　破壊されるが、spの位置はdispatch()を呼び出したときと同じ
      *　なので問題ない
      *　
@@ -1253,7 +1253,7 @@ dispatcher_2:
     /*  
      *  割込み許可と省電力モードへの移行
      *  　・割込みから戻ってきた後に割込み禁止も行う
-     *  　・r0〜r4の内容を破壊してはならない
+     *  　・r0～r4の内容を破壊してはならない
      *
      *  注意
      *      「割込み許可」と「省電力モードへの移行」をアトミックに行え

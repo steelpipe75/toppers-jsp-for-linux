@@ -8,7 +8,7 @@
  *  Copyright (C) 2007-2010 by Monami Software Limited Partnership, JAPAN.
  * 
  * 
- *  上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation 
+ *  上記著作権者は，以下の (1)～(4) の条件か，Free Software Foundation 
  *  によって公表されている GNU General Public License の Version 2 に記
  *  述されている条件を満たす場合に限り，本ソフトウェア（本ソフトウェア
  *  を改変したものを含む．以下同じ）を使用・複製・改変・再配布（以下，
@@ -61,7 +61,7 @@ typedef struct sio_port_control_block {
 	const SIOPINIB	*inib;		/* 初期化ブロック	*/
 	VP_INT		exinf;		/* 拡張情報		*/
 	BOOL		openflag;	/* オープン済みフラグ	*/
-	int			port_id;	/* ポート番号(0〜) */
+	int			port_id;	/* ポート番号(0～) */
 } SIOPCB;
 
 extern SIOPCB siopcb_table[TNUM_PORT];

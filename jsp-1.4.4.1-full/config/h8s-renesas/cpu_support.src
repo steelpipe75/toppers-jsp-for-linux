@@ -10,7 +10,7 @@
 ;  Copyright (C) 2001-2004 by Dep. of Computer Science and Engineering
 ;                   Tomakomai National College of Technology, JAPAN
 ;
-;  上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation
+;  上記著作権者は，以下の (1)～(4) の条件か，Free Software Foundation
 ;  によって公表されている GNU General Public License の Version 2 に記
 ;  述されている条件を満たす場合に限り，本ソフトウェア（本ソフトウェア
 ;  を改変したものを含む．以下同じ）を使用・複製・改変・再配布（以下，
@@ -107,7 +107,7 @@ _exit_and_dispatch:
         ;
         .GLOBAL _dispatch
 _dispatch:
-        push.l  er2                     ; er2〜6を保存
+        push.l  er2                     ; er2～6を保存
         push.l  er3
         push.l  er4
         push.l  er5
@@ -189,7 +189,7 @@ dispatcher_2_enable_interrupt:
 ; タスクスイッチの結果ここから実行が再開される
 ;
 dispatch_r:
-        pop.l   er6                     ; er2〜6を復元
+        pop.l   er6                     ; er2～6を復元
         pop.l   er5
         pop.l   er4
         pop.l   er3
@@ -245,7 +245,7 @@ OFFSET_EXR:             .DEFINE         "16"
 
         .GLOBAL _common_interrupt_process
 _common_interrupt_process:
-        push.l  er1                     ;　er1〜er3の退避
+        push.l  er1                     ;　er1～er3の退避
         push.l  er2
         push.l  er3
         stc.b	exr, r1l                ;　exrのコピー
@@ -484,12 +484,12 @@ sil_dly_nse_2:
 ;
 ;  no_reg_exception()
 ;  CPU例外として登録されていない例外が発生すると呼び出される。
-;  例外が発生した時点のPC,ER0〜7を出力してカーネル
+;  例外が発生した時点のPC,ER0～7を出力してカーネル
 ;  を停止する。
         .GLOBAL _no_reg_exception
 _no_reg_exception:
 
-                        ;  er0〜6を保存
+                        ;  er0～6を保存
         push.l  er6     ;　　 +0:er0
         push.l  er5     ;　　 +4:er1
         push.l  er4     ;　　 +8:er2
@@ -501,7 +501,7 @@ _no_reg_exception:
                         ;　　+29:リザーブ
                         ;　　+30:crr
                         ;　　+31:pc
-                        ;　　+34〜:割込み前に使用されていたスタック領域
+                        ;　　+34～:割込み前に使用されていたスタック領域
 
         mov.l   sp, er0         ;  引数設定
                                 ;    SPは+34で、発生時点の値

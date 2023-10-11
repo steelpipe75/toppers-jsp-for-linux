@@ -8,7 +8,7 @@
  * 
  *  Copyright (C) 2005-2007 by Y.D.K.Co.,LTD Technologies company
  *
- *  上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation 
+ *  上記著作権者は，以下の (1)～(4) の条件か，Free Software Foundation 
  *  によって公表されている GNU General Public License の Version 2 に記
  *  述されている条件を満たす場合に限り，本ソフトウェア（本ソフトウェア
  *  を改変したものを含む．以下同じ）を使用・複製・改変・再配布（以下，
@@ -159,69 +159,69 @@ const	UW	int_id_table[] = {
 /*
  **** Control Registers ****
  */
-/* Control Registers #1 (GPIO[0]〜[31]) */
+/* Control Registers #1 (GPIO[0]～[31]) */
 const	UW	BbusGpio_ContSts1 = (BBUS_GPIO_CONT_STS1_GPIO2 | BBUS_GPIO_CONT_STS1_GPIO16);
 
-/* Control Registers #2 (GPIO[32]〜[63]) */
+/* Control Registers #2 (GPIO[32]～[63]) */
 const	UW	BbusGpio_ContSts2 = (BBUS_GPIO_CONT_STS2_GPIO36 | BBUS_GPIO_CONT_STS2_GPIO37 
                                             | BBUS_GPIO_CONT_STS2_GPIO38 | BBUS_GPIO_CONT_STS2_GPIO39);
 	
-/* Control Registers #3 (GPIO[64]〜[72]) */
+/* Control Registers #3 (GPIO[64]～[72]) */
 const	UW	BbusGpio_ContSts3 = 0;
 
 /*
  **** Configration Registers ****
  */
 
-/* Configration Registers #1 (GPIO[0]〜[7]) */
+/* Configration Registers #1 (GPIO[0]～[7]) */
 const	UW	BbusGpio_Config1 = (BBUS_GPIO_CONFIG1_GPIO0 | BBUS_GPIO_CONFIG1_GPIO1
                               | BBUS_GPIO_CONFIG1_GPIO2 | BBUS_GPIO_CONFIG1_GPIO3
                               | BBUS_GPIO_CONFIG1_GPIO4 | BBUS_GPIO_CONFIG1_GPIO5
                               | BBUS_GPIO_CONFIG1_GPIO6 | BBUS_GPIO_CONFIG1_GPIO7);
 
-/* Configration Registers #2 (GPIO[8]〜[15]) */
+/* Configration Registers #2 (GPIO[8]～[15]) */
 const	UW	BbusGpio_Config2 = (BBUS_GPIO_CONFIG2_GPIO8 | BBUS_GPIO_CONFIG2_GPIO9
                               | BBUS_GPIO_CONFIG2_GPIO10 | BBUS_GPIO_CONFIG2_GPIO11
                               | BBUS_GPIO_CONFIG2_GPIO12 | BBUS_GPIO_CONFIG2_GPIO13
                               | BBUS_GPIO_CONFIG2_GPIO14 | BBUS_GPIO_CONFIG2_GPIO15);
 
-/* Configration Registers #3 (GPIO[16]〜[23]) */
+/* Configration Registers #3 (GPIO[16]～[23]) */
 const	UW	BbusGpio_Config3 = (BBUS_GPIO_CONFIG3_GPIO16 | BBUS_GPIO_CONFIG3_GPIO17
                               | BBUS_GPIO_CONFIG3_GPIO18 | BBUS_GPIO_CONFIG3_GPIO19
                               | BBUS_GPIO_CONFIG3_GPIO20 | BBUS_GPIO_CONFIG3_GPIO21
                               | BBUS_GPIO_CONFIG3_GPIO22 | BBUS_GPIO_CONFIG3_GPIO23);
 
-/* Configration Registers #4 (GPIO[24]〜[31]) */
+/* Configration Registers #4 (GPIO[24]～[31]) */
 const	UW	BbusGpio_Config4 = (BBUS_GPIO_CONFIG4_GPIO24 | BBUS_GPIO_CONFIG4_GPIO25
                               | BBUS_GPIO_CONFIG4_GPIO26 | BBUS_GPIO_CONFIG4_GPIO27
                               | BBUS_GPIO_CONFIG4_GPIO28 | BBUS_GPIO_CONFIG4_GPIO29
                               | BBUS_GPIO_CONFIG4_GPIO30 | BBUS_GPIO_CONFIG4_GPIO31);
 
-/* Configration Registers #5 (GPIO[32]〜[39]) */
+/* Configration Registers #5 (GPIO[32]～[39]) */
 const	UW	BbusGpio_Config5 = (BBUS_GPIO_CONFIG5_GPIO32 | BBUS_GPIO_CONFIG5_GPIO33
                               | BBUS_GPIO_CONFIG5_GPIO34 | BBUS_GPIO_CONFIG5_GPIO35
                               | BBUS_GPIO_CONFIG5_GPIO36 | BBUS_GPIO_CONFIG5_GPIO37
                               | BBUS_GPIO_CONFIG5_GPIO38 | BBUS_GPIO_CONFIG5_GPIO39);
 
-/* Configration Registers #6 (GPIO[40]〜[47]) */
+/* Configration Registers #6 (GPIO[40]～[47]) */
 const	UW	BbusGpio_Config6 = (BBUS_GPIO_CONFIG6_GPIO40 | BBUS_GPIO_CONFIG6_GPIO41
                               | BBUS_GPIO_CONFIG6_GPIO42 | BBUS_GPIO_CONFIG6_GPIO43
                               | BBUS_GPIO_CONFIG6_GPIO44 | BBUS_GPIO_CONFIG6_GPIO45
                               | BBUS_GPIO_CONFIG6_GPIO46 | BBUS_GPIO_CONFIG6_GPIO47);
 
-/* Configration Registers #7 (GPIO[48]〜[55]) */
+/* Configration Registers #7 (GPIO[48]～[55]) */
 const	UW	BbusGpio_Config7 = (BBUS_GPIO_CONFIG7_GPIO48 | BBUS_GPIO_CONFIG7_GPIO49
                               | BBUS_GPIO_CONFIG7_GPIO50 | BBUS_GPIO_CONFIG7_GPIO51
                               | BBUS_GPIO_CONFIG7_GPIO52 | BBUS_GPIO_CONFIG7_GPIO53
                               | BBUS_GPIO_CONFIG7_GPIO54 | BBUS_GPIO_CONFIG7_GPIO55);
 
-/* Configration Registers #8 (GPIO[56]〜[63]) */
+/* Configration Registers #8 (GPIO[56]～[63]) */
 const	UW	BbusGpio_Config8 = (BBUS_GPIO_CONFIG8_GPIO56 | BBUS_GPIO_CONFIG8_GPIO57
                               | BBUS_GPIO_CONFIG8_GPIO58 | BBUS_GPIO_CONFIG8_GPIO59
                               | BBUS_GPIO_CONFIG8_GPIO60 | BBUS_GPIO_CONFIG8_GPIO61
                               | BBUS_GPIO_CONFIG8_GPIO62 | BBUS_GPIO_CONFIG8_GPIO63);
 
-/* Configration Registers #9 (GPIO[64]〜[71]) */
+/* Configration Registers #9 (GPIO[64]～[71]) */
 const	UW	BbusGpio_Config9 = (BBUS_GPIO_CONFIG9_GPIO64 | BBUS_GPIO_CONFIG9_GPIO65
                               | BBUS_GPIO_CONFIG9_GPIO66 | BBUS_GPIO_CONFIG9_GPIO67
                               | BBUS_GPIO_CONFIG9_GPIO68 | BBUS_GPIO_CONFIG9_GPIO69
@@ -480,43 +480,43 @@ static void	cpuSetupGPIO(void)
 	 */
 	/* 該当pinをGPIO出力に設定した場合にデフォルト出力を指定したい場合に以下を記述する */
 	
-	/* Control Registers #1 (GPIO[0]〜[31]) */
+	/* Control Registers #1 (GPIO[0]～[31]) */
 	sil_wrw_mem((VP) BBUS_GPIO_CONT1_REG , BbusGpio_ContSts1);
 
-	/* Control Registers #2 (GPIO[32]〜[63]) */
+	/* Control Registers #2 (GPIO[32]～[63]) */
 	sil_wrw_mem((VP) BBUS_GPIO_CONT2_REG , BbusGpio_ContSts2);
 	
-	/* Control Registers #3 (GPIO[64]〜[72]) */
+	/* Control Registers #3 (GPIO[64]～[72]) */
 	sil_wrw_mem((VP) BBUS_GPIO_CONT3_REG , BbusGpio_ContSts3);
 
 	/*
 	 **** Configration Registers ****
 	 */
-	/* Configration Registers #1 (GPIO[0]〜[7]) */
+	/* Configration Registers #1 (GPIO[0]～[7]) */
 	sil_wrw_mem((VP) BBUS_GPIO_CONFIG1_REG , BbusGpio_Config1);
 
-	/* Configration Registers #2 (GPIO[8]〜[15]) */
+	/* Configration Registers #2 (GPIO[8]～[15]) */
 	sil_wrw_mem((VP) BBUS_GPIO_CONFIG2_REG , BbusGpio_Config2);
 
-	/* Configration Registers #3 (GPIO[16]〜[23]) */
+	/* Configration Registers #3 (GPIO[16]～[23]) */
 	sil_wrw_mem((VP) BBUS_GPIO_CONFIG3_REG , BbusGpio_Config3);
 
-	/* Configration Registers #4 (GPIO[24]〜[31]) */
+	/* Configration Registers #4 (GPIO[24]～[31]) */
 	sil_wrw_mem((VP) BBUS_GPIO_CONFIG4_REG , BbusGpio_Config4);
 
-	/* Configration Registers #5 (GPIO[32]〜[39]) */
+	/* Configration Registers #5 (GPIO[32]～[39]) */
 	sil_wrw_mem((VP) BBUS_GPIO_CONFIG5_REG , BbusGpio_Config5);
 
-	/* Configration Registers #6 (GPIO[40]〜[47]) */
+	/* Configration Registers #6 (GPIO[40]～[47]) */
 	sil_wrw_mem((VP) BBUS_GPIO_CONFIG6_REG , BbusGpio_Config6);
 
-	/* Configration Registers #7 (GPIO[48]〜[55]) */
+	/* Configration Registers #7 (GPIO[48]～[55]) */
 	sil_wrw_mem((VP) BBUS_GPIO_CONFIG7_REG , BbusGpio_Config7);
 
-	/* Configration Registers #8 (GPIO[56]〜[63]) */
+	/* Configration Registers #8 (GPIO[56]～[63]) */
 	sil_wrw_mem((VP) BBUS_GPIO_CONFIG8_REG , BbusGpio_Config8);
 
-	/* Configration Registers #9 (GPIO[64]〜[71]) */
+	/* Configration Registers #9 (GPIO[64]～[71]) */
 	sil_wrw_mem((VP) BBUS_GPIO_CONFIG9_REG , BbusGpio_Config9);
 
 	/* Configration Registers #10 (GPIO[72]) */

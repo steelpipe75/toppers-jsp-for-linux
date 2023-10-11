@@ -9,7 +9,7 @@
  *                              Miyagi Prefectural Government, JAPAN
  *  Copyright (C) 2003-2004 by CHUO ELECTRIC WORKS Co.,LTD. JAPAN
  * 
- *  上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation 
+ *  上記著作権者は，以下の (1)～(4) の条件か，Free Software Foundation 
  *  によって公表されている GNU General Public License の Version 2 に記
  *  述されている条件を満たす場合に限り，本ソフトウェア（本ソフトウェア
  *  を改変したものを含む．以下同じ）を使用・複製・改変・再配布（以下，
@@ -68,14 +68,14 @@
 #define PBCR1_RD1 		0x20u		/*  RxD1端子設定用マクロ  	*/
 
 /* Ａ／Ｄ */
-#define AD_DRAH		((VH *)0x5fffee0)	/* A/D データ・レジスタＡ H（ビット9〜2）*/
-#define AD_DRAL		((VH *)0x5fffee1)	/* A/D データ・レジスタＡ L（ビット1〜0）*/
-#define AD_DRBH		((VH *)0x5fffee2)	/* A/D データ・レジスタＢ H（ビット9〜2）*/
-#define AD_DRBL		((VH *)0x5fffee3)	/* A/D データ・レジスタＢ L（ビット1〜0）*/
-#define AD_DRCH		((VH *)0x5fffee4)	/* A/D データ・レジスタＣ H（ビット9〜2）*/
-#define AD_DRCL		((VH *)0x5fffee5)	/* A/D データ・レジスタＣ L（ビット1〜0）*/
-#define AD_DRDH		((VH *)0x5fffee6)	/* A/D データ・レジスタＤ H（ビット9〜2）*/
-#define AD_DRDL		((VH *)0x5fffee7)	/* A/D データ・レジスタＤ L（ビット1〜0）*/
+#define AD_DRAH		((VH *)0x5fffee0)	/* A/D データ・レジスタＡ H（ビット9～2）*/
+#define AD_DRAL		((VH *)0x5fffee1)	/* A/D データ・レジスタＡ L（ビット1～0）*/
+#define AD_DRBH		((VH *)0x5fffee2)	/* A/D データ・レジスタＢ H（ビット9～2）*/
+#define AD_DRBL		((VH *)0x5fffee3)	/* A/D データ・レジスタＢ L（ビット1～0）*/
+#define AD_DRCH		((VH *)0x5fffee4)	/* A/D データ・レジスタＣ H（ビット9～2）*/
+#define AD_DRCL		((VH *)0x5fffee5)	/* A/D データ・レジスタＣ L（ビット1～0）*/
+#define AD_DRDH		((VH *)0x5fffee6)	/* A/D データ・レジスタＤ H（ビット9～2）*/
+#define AD_DRDL		((VH *)0x5fffee7)	/* A/D データ・レジスタＤ L（ビット1～0）*/
 #define AD_CSR		((VH *)0x5fffee8)	/* A/D コントロール／ステータス・レジスタ */
 #define AD_CR		((VH *)0x5fffee9)	/* A/D コントロール・レジスタ 		 */
 #define	ADF			0x80		/* ADF				*/
@@ -215,7 +215,7 @@
 /* 低消費電力 */
 #define SYS_SBYCR	((VH *)0x5ffffbc)	/* スタンバイ・コントロール・レジスタ */
 
-/* ポートＡ〜Ｃ */
+/* ポートＡ～Ｃ */
 #define PA_DR		((VH *)0x5ffffc0)	/* ポートＡ データ・レジスタ */
 #define PB_DR		((VH *)0x5ffffc2)	/* ポートＢ データ・レジスタ */
 #define PC_DR		((VH *)0x5ffffd0)	/* ポートＣ データ・レジスタ */

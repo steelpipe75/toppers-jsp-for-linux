@@ -7,7 +7,7 @@
  *                              Toyohashi Univ. of Technology, JAPAN
  *  Copyright (C) 2005 by Freelines CO.,Ltd 
  * 
- *  上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation 
+ *  上記著作権者は，以下の (1)～(4) の条件か，Free Software Foundation 
  *  によって公表されている GNU General Public License の Version 2 に記
  *  述されている条件を満たす場合に限り，本ソフトウェア（本ソフトウェア
  *  を改変したものを含む．以下同じ）を使用・複製・改変・再配布（以下，
@@ -79,7 +79,7 @@
 /*
  *  サポートするシリアルディバイスの数は最大 2
  */
-#define	CONSOLE_PORTID	1	/* コンソール用に用いるシリアルポート番号（SG2では1〜3） */
+#define	CONSOLE_PORTID	1	/* コンソール用に用いるシリアルポート番号（SG2では1～3） */
 #define TNUM_PORT		1
 #define SEPARATE_SIO_INT	/* 受信割り込みと送信完了割り込みが区別された割り込みになっているか */
 #define	LOGTASK_PORTID		CONSOLE_PORTID	/* システムログを出力するシリアルポート番号	*/

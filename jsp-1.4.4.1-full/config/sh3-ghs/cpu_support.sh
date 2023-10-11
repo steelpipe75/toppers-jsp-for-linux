@@ -7,7 +7,7 @@
  *                              Toyohashi Univ. of Technology, JAPAN
  *                     2003         by Advanced Data Controls, Corp
  * 
- *  上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation 
+ *  上記著作権者は，以下の (1)～(4) の条件か，Free Software Foundation 
  *  によって公表されている GNU General Public License の Version 2 に記
  *  述されている条件を満たす場合に限り，本ソフトウェア（本ソフトウェア
  *  を改変したものを含む．以下同じ）を使用・複製・改変・再配布（以下，
@@ -85,7 +85,7 @@ _BASE_VBR:
  *  されない。
  *
  *		
- *  例外が発生すると、例外発生元のコンテキストであるspc,pr,ssr,r0〜r7を退避
+ *  例外が発生すると、例外発生元のコンテキストであるspc,pr,ssr,r0～r7を退避
  *  する。例外が発生した時点でのコンテキストを調べ非タスクコンテキストなら
  *  _exception_from_intから実行を開始する。例外の要因はEXPEVTレジスタ読み、
  *  exc_tableからCPU例外ハンドラの開始番地を読み込む。発生した例外に対して
@@ -130,7 +130,7 @@ _general_exception:
     stc.l  gbr,@-r15					
     sts.l  macl,@-r15					
     sts.l  mach,@-r15
-    stc.l  r0_bank,@-r15 /* 例外発生時のr0〜r7を保存        */    
+    stc.l  r0_bank,@-r15 /* 例外発生時のr0～r7を保存        */    
     stc.l  r1_bank,@-r15
     stc.l  r2_bank,@-r15
     stc.l  r3_bank,@-r15
@@ -229,7 +229,7 @@ _exception_from_exc:
     dt     r7
     ldc    r7,r7_bank
 _ret_to_task_exc:
-    mov.l  @r15+,r7           /* r0〜r1,ssr,pr,spcを復帰しタスクに戻る     */
+    mov.l  @r15+,r7           /* r0～r1,ssr,pr,spcを復帰しタスクに戻る     */
     mov.l  @r15+,r6
     mov.l  @r15+,r5
     mov.l  @r15+,r4
@@ -318,8 +318,8 @@ _exception_hook_dis:
     .align 2
     .global _dispatch
 _dispatch:
-    sts.l  pr,@-r15         /* pr,r8〜r15 をスタックに保存           */
-    mov.l  r14,@-r15        /* r0〜r7は呼び出し元で保存しているため  */    
+    sts.l  pr,@-r15         /* pr,r8～r15 をスタックに保存           */
+    mov.l  r14,@-r15        /* r0～r7は呼び出し元で保存しているため  */    
     mov.l  r13,@-r15        /* 保存する必要が無い                    */    
     mov.l  r12,@-r15
     mov.l  r11,@-r15
@@ -662,7 +662,7 @@ _interrupt:
     stc.l  gbr,@-r15                    
     sts.l  macl,@-r15                    
     sts.l  mach,@-r15                                                    
-    stc.l  r0_bank,@-r15   /* ,r0〜r7をスタックに保存   */ 
+    stc.l  r0_bank,@-r15   /* ,r0～r7をスタックに保存   */ 
     stc.l  r1_bank,@-r15
     stc.l  r2_bank,@-r15
     stc.l  r3_bank,@-r15

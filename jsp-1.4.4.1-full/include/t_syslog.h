@@ -8,7 +8,7 @@
  *  Copyright (C) 2004 by Embedded and Real-Time Systems Laboratory
  *              Graduate School of Information Science, Nagoya Univ., JAPAN
  * 
- *  上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation 
+ *  上記著作権者は，以下の (1)～(4) の条件か，Free Software Foundation 
  *  によって公表されている GNU General Public License の Version 2 に記
  *  述されている条件を満たす場合に限り，本ソフトウェア（本ソフトウェア
  *  を改変したものを含む．以下同じ）を使用・複製・改変・再配布（以下，
@@ -246,7 +246,7 @@ _syslog_6(UINT prio, UINT type, VP_INT arg1, VP_INT arg2, VP_INT arg3,
  *  ログ情報（コメント）を出力するためのマクロ
  *
  *  format および後続の引数から作成したメッセージを，重大度 prio で
- *  ログ情報として出力するためのマクロ．arg1〜argn は VP_INT型にキャ
+ *  ログ情報として出力するためのマクロ．arg1～argn は VP_INT型にキャ
  *  ストするため，VP_INT型に型変換できる任意の型でよい．
  */
 

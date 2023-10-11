@@ -7,7 +7,7 @@
  *  Copyright (C) 2000-2003 by Embedded and Real-Time Systems Laboratory
  *                              Toyohashi Univ. of Technology, JAPAN
  * 
- * 上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation 
+ * 上記著作権者は，以下の (1)～(4) の条件か，Free Software Foundation 
  * によって公表されている GNU General Public License の Version 2 に記
  * 述されている条件を満たす場合に限り，本ソフトウェア（本ソフトウェア
  * を改変したものを含む．以下同じ）を使用・複製・改変・再配布（以下，
@@ -413,11 +413,11 @@ ret_int_2:
 	 * タスク起動処理
      *   
      *  スタックの取り方
-     *  Microblaze Processor Reference Guide 52〜53より
-     *  関数呼出しのさい引数は，r5〜r10 に格納する．
+     *  Microblaze Processor Reference Guide 52～53より
+     *  関数呼出しのさい引数は，r5～r10 に格納する．
      *  それと同時に呼出し元はスタックフレームに引数の格納場所を確保する必要
      *  がある．さらにその上にはリンクレジスタ(R15)の分の領域が必要となる．
-     *  呼出し先は更に他の関数を呼び出す場合等に r5〜r10 をこの領域に保存す
+     *  呼出し先は更に他の関数を呼び出す場合等に r5～r10 をこの領域に保存す
      * る．
      *  Low Address
      *             --------------------

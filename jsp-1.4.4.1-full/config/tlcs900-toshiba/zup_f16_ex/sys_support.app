@@ -48,7 +48,7 @@
 ;   TOPPERS PROJECT BE LIABLE FOR ANY TYPE OF DAMAGE DIRECTLY OR
 ;   INDIRECTLY CAUSED FROM THE USE OF THIS SOFTWARE.
 ;
-;   上記著作権者は，以下の (1)〜(4) の条件を満たす場合に限り，本ソフトウェ
+;   上記著作権者は，以下の (1)～(4) の条件を満たす場合に限り，本ソフトウェ
 ;   ア（本ソフトウェアを改変したものを含む．以下同じ）を使用・複製・改変・
 ;   再配布（以下，利用と呼ぶ）することを無償で許諾する．
 ;   (1) 本ソフトウェアをソースコードの形で利用する場合には，上記の著作権
@@ -113,16 +113,16 @@ lockup:			; ロックアップ待ち
 	ldb		(TADR_SFR_B2CS), 0x00
 ; 外部アドレス空間1有効(1MByteSRAM)
 	ldb		(TADR_SFR_P1CR), 0x00
-	ldb		(TADR_SFR_P1FC), 0xff	; AD0〜AD15を使用
+	ldb		(TADR_SFR_P1FC), 0xff	; AD0～AD15を使用
 	ldb		(TADR_SFR_P2CR), 0xff
-	ldb		(TADR_SFR_P2FC), 0x0f	; A16〜A19を使用(残りはポート)
+	ldb		(TADR_SFR_P2FC), 0x0f	; A16～A19を使用(残りはポート)
 	ldb		(TADR_SFR_P2), 0xff
 	ldb		(TADR_SFR_P3), 0x78
 	ldb		(TADR_SFR_P3CR), 0x7f
 	ldb		(TADR_SFR_P3FC), 0x07	; RD/WR/HWRを使用
 	ldb		(TADR_SFR_P4FC), 0x02	; CS1を使用
 	ldb		(TADR_SFR_P4CR), 0x0e
-	ldb		(TADR_SFR_MSAR1), 0x10	; 0x00100000〜
+	ldb		(TADR_SFR_MSAR1), 0x10	; 0x00100000～
 	ldb		(TADR_SFR_MAMR1), 0x3f	; 0x001fffff
 	ldb		(TADR_SFR_B1CS), 0x83	; 0ウェイト/16bitDataBus
 

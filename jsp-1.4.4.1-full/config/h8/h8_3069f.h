@@ -11,7 +11,7 @@
  *                   Tomakomai National College of Technology, JAPAN
  *  Copyright (C) 2001-2004 by Kunihiko Ohnaka
  * 
- *  上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation 
+ *  上記著作権者は，以下の (1)～(4) の条件か，Free Software Foundation 
  *  によって公表されている GNU General Public License の Version 2 に記
  *  述されている条件を満たす場合に限り，本ソフトウェア（本ソフトウェア
  *  を改変したものを含む．以下同じ）を使用・複製・改変・再配布（以下，
@@ -115,8 +115,8 @@
 
 /* 
  * register address 
- *　　内部I/Oレジスタ(1) 0xfe,e000〜0xfe,e0ff
- *　　内部I/Oレジスタ(2) 0xff,ff20〜0xff,ffe9
+ *　　内部I/Oレジスタ(1) 0xfe,e000～0xfe,e0ff
+ *　　内部I/Oレジスタ(2) 0xff,ff20～0xff,ffe9
  *　　　　マニュアルには下位20ビットしか記載されていないので
  *　　　　上位4ビット（0xf0,0000）を補う。
  */
@@ -921,7 +921,7 @@
 /*
  *  I/Oポート
  */
-#define H8PORT_NUM		12	/*  ポート1〜ポートB (DDR値一時保存用) */
+#define H8PORT_NUM		12	/*  ポート1～ポートB (DDR値一時保存用) */
 
 /*  ポート1  */
 #define H8P10DDR		0x01

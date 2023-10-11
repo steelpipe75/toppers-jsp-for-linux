@@ -9,7 +9,7 @@
  *                              Miyagi Prefectural Government, JAPAN
  *  Copyright (C) 2003-2004 by CHUO ELECTRIC WORKS Co.,LTD. JAPAN
  * 
- *  上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation 
+ *  上記著作権者は，以下の (1)～(4) の条件か，Free Software Foundation 
  *  によって公表されている GNU General Public License の Version 2 に記
  *  述されている条件を満たす場合に限り，本ソフトウェア（本ソフトウェア
  *  を改変したものを含む．以下同じ）を使用・複製・改変・再配布（以下，
@@ -95,7 +95,7 @@
  *  ２．0x0200,0000 -              データ領域(128KB)
  *                  - 0x0201,ffff  タスク独立部用スタック メモリ終了
  *
- *  ただしコード領域の0x0000〜0xFFFFにFROM書込みプログラム内蔵のため
+ *  ただしコード領域の0x0000～0xFFFFにFROM書込みプログラム内蔵のため
  *  ユーザー使用可能領域は0x10000からとなる
  */
 /*

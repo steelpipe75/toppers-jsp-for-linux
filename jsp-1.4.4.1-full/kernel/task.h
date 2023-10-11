@@ -8,7 +8,7 @@
  *  Copyright (C) 2005,2006 by Embedded and Real-Time Systems Laboratory
  *              Graduate School of Information Science, Nagoya Univ., JAPAN
  * 
- *  上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation 
+ *  上記著作権者は，以下の (1)～(4) の条件か，Free Software Foundation 
  *  によって公表されている GNU General Public License の Version 2 に記
  *  述されている条件を満たす場合に限り，本ソフトウェア（本ソフトウェア
  *  を改変したものを含む．以下同じ）を使用・複製・改変・再配布（以下，
@@ -102,9 +102,9 @@
  *
  *  同期・通信オブジェクトに対する待ち状態の場合には，標準の WINFO に 
  *  wobjcbフィールドを追加した構造体（WINFO_WOBJ，wait.h で定義）を使
- *  い，タスク状態に TS_WAIT_WOBJ を設定する．また，以下の (c)〜(e) の
+ *  い，タスク状態に TS_WAIT_WOBJ を設定する．また，以下の (c)～(e) の
  *  設定を行う必要がある．同期・通信オブジェクトに関係しない待ち（起床
- *  待ち，時間経過待ち）の場合には，(c)〜(e) は必要ない．
+ *  待ち，時間経過待ち）の場合には，(c)～(e) は必要ない．
  *
  *  (c) TCB を待ち対象の同期・通信オブジェクトの待ちキューにつなぐ．待
  *  ちキューにつなぐために，task_queue を使う．TCB を同期・通信オブジェ

@@ -10,7 +10,7 @@
 ;  Copyright (C) 2001-2004 by Dep. of Computer Science and Engineering
 ;                   Tomakomai National College of Technology, JAPAN
 ;
-;  上記著作権者は，以下の (1)〜(4) の条件か，Free Software Foundation
+;  上記著作権者は，以下の (1)～(4) の条件か，Free Software Foundation
 ;  によって公表されている GNU General Public License の Version 2 に記
 ;  述されている条件を満たす場合に限り，本ソフトウェア（本ソフトウェア
 ;  を改変したものを含む．以下同じ）を使用・複製・改変・再配布（以下，
@@ -90,7 +90,7 @@ ENAINT: .DEFINE         "andc.b #CCR_ENAINT_ALL, ccr"
 
         .GLOBAL _dispatch
 _dispatch:
-        push.l  er2                     ; er2〜6を保存
+        push.l  er2                     ; er2～6を保存
         push.l  er3
         push.l  er4
         push.l  er5
@@ -105,7 +105,7 @@ _dispatch:
 ; タスクスイッチの結果ここから実行が再開される
 
 dispatch_r:
-        pop.l   er6                     ; er2〜6を復元
+        pop.l   er6                     ; er2～6を復元
         pop.l   er5
         pop.l   er4
         pop.l   er3
@@ -223,7 +223,7 @@ dispatcher_2_enable_interrupt:
 ;
 ;　　　　以下の状態でここにやってくる
 ;　　　　　・割込み禁止
-;　　　　　・er0〜er3退避済み
+;　　　　　・er0～er3退避済み
 ;　　　　　・er2：C言語ルーチンの先頭アドレス
 ;　　　　　・r3l：割込み許可時に割込みマスクに設定する値
 
@@ -432,12 +432,12 @@ sil_dly_nse_2:
 ;
 ;  no_reg_exception()
 ;  CPU例外として登録されていない例外が発生すると呼び出される。
-;  例外が発生した時点のPC,ER0〜7を出力してカーネル
+;  例外が発生した時点のPC,ER0～7を出力してカーネル
 ;  を停止する。
         .GLOBAL _no_reg_exception
 _no_reg_exception:
 
-                        ;  er0〜6を保存
+                        ;  er0～6を保存
         push.l  er6     ;　　 +0:er0
         push.l  er5     ;　　 +4:er1
         push.l  er4     ;　　 +8:er2
@@ -447,7 +447,7 @@ _no_reg_exception:
         push.l  er0     ;　　+24:er6
                         ;　　+25:crr
                         ;　　+26:pc
-                        ;　　+28〜:割込み前に使用されていたスタック領域
+                        ;　　+28～:割込み前に使用されていたスタック領域
 
         mov.l   sp, er0         ;  引数設定
                                 ;    SPは+28で、発生時点の値
